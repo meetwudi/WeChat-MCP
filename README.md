@@ -26,7 +26,8 @@ An MCP server that automates WeChat on macOS using the Accessibility API and scr
 ### Installation
 
 ```bash
-pip install wechat-mcp-server
+# This fork pins the MCP 1.x API required by the current server code.
+pip install git+https://github.com/meetwudi/WeChat-MCP.git
 ```
 
 ### Setup with Claude Code
@@ -87,11 +88,12 @@ codex mcp add wechat-mcp -- uv --directory $(pwd) run wechat-mcp
 
 ### macOS Permissions
 
-⚠️ **Important**: Grant Accessibility permissions to your terminal:
+⚠️ **Important**: Grant Accessibility permissions to the application that launches the MCP server (for example, the terminal, Claude, or Codex/ChatGPT):
 
 1. Open **System Settings → Privacy & Security → Accessibility**
-2. Add your terminal application (Terminal.app, iTerm2, etc.)
-3. Ensure WeChat is running before using the server
+2. Enable the application that launches the MCP server.
+3. Enable that same application under **Screen Recording**; message retrieval captures the visible chat area.
+4. Ensure WeChat is running before using the server.
 
 ## Usage
 
@@ -158,7 +160,7 @@ uv run wechat-mcp --transport stdio
 - macOS (uses Accessibility API)
 - WeChat for Mac installed and running
 - Python 3.12+
-- Accessibility permissions for terminal
+- Accessibility and Screen Recording permissions for the MCP-launching application
 
 ## Contributing
 
