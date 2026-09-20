@@ -3430,7 +3430,7 @@ wheels = [
 
 [[package]]
 name = "wechat-mcp-server"
-version = "0.2.0"
+version = "0.2.1"
 source = { editable = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
@@ -3441,7 +3441,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "mcp", extras = ["cli"], specifier = ">=1.0.0" },
+    { name = "mcp", extras = ["cli"], specifier = ">=1.0.0,<2" },
     { name = "pillow", specifier = ">=10.0.0" },
     { name = "pyobjc", specifier = ">=12.1" },
     { name = "pyobjc-framework-applicationservices", specifier = ">=12.1" },
